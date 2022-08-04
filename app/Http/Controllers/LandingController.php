@@ -33,6 +33,7 @@ class LandingController extends Controller
 {
     public function index()
     {
+        // Coba Update
         $kontak = Kontak::orderBy('id', 'asc')->get();
         $tampilanBeranda = TampilanBeranda::orderBy("id", 'asc')->get();
         $listBerita = Berita::orderBy('id', 'desc')->limit(3)->get();
