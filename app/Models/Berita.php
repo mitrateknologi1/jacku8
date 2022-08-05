@@ -14,7 +14,7 @@ class Berita extends Model
 
     public function kategoriBerita()
     {
-        return $this->belongsTo(KategoriBerita::class);
+        return $this->belongsTo(KategoriBerita::class)->withTrashed();
     }
 
     public function getTanggalAttribute($value)
