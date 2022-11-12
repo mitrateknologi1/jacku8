@@ -166,7 +166,7 @@
     </section>
 
     <div class="container" id="body">
-        <div class="row">
+        <div class="row" id="row">
             <div class="tree">
                 <ul>
                     <li> <a href="#"><img
@@ -212,14 +212,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         var myDiv = $("#body");
-        var scrollto = 572;
+        var myRow = $("#row");
+        var scrollto = (myRow.width() - myDiv.width()) / 2;
         myDiv.animate({
             scrollLeft: scrollto
-        });
-
-        $("#body").scroll(function(event) {
-            var scroll = $("#body").scrollLeft();
-            console.log(scroll);
         });
     </script>
 @endpush

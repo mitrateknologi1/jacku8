@@ -6,6 +6,8 @@ namespace Database\Seeders;
 
 use App\Models\Profil;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,6 +24,21 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        Storage::deleteDirectory('/akun');
+        Storage::deleteDirectory('/berita');
+        Storage::deleteDirectory('/divisiJurnal');
+        Storage::deleteDirectory('/divisiKurikulum');
+        Storage::deleteDirectory('/divisiPenelitian');
+        Storage::deleteDirectory('/files');
+        Storage::deleteDirectory('/photos');
+        Storage::deleteDirectory('/struktur_organisasi');
+        Storage::deleteDirectory('/tampilan_beranda');
+
+        File::copyDirectory(
+            public_path('file_dummy'),
+            storage_path('app/public/')
+        );
 
         $this->call(GolonganSeeder::class);
         $this->call(JabatanFungsionalSeeder::class);
