@@ -164,7 +164,8 @@
 
                             <!-- Heading -->
                             <h4 class="fw-bold">
-                                <a href="{{ url('dokumen/divisi-jurnal/arsip') }}" class="text-decoration-none text-danger">
+                                <a href="#" class="text-decoration-none text-danger" data-bs-toggle="modal"
+                                    data-bs-target="#modal-divisi-kerjasama">
                                     Divisi Kerjasama dan Publikasi Jurnal
                                 </a>
                             </h4>

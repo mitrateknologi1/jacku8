@@ -83,7 +83,8 @@
 
                                 </div>
                             </a>
-                            <a class="list-group-item" href="{{ url('/dokumen/divisi-jurnal/arsip') }}">
+                            <a class="list-group-item" href="#" data-bs-toggle="modal"
+                                data-bs-target="#modal-divisi-kerjasama">
 
                                 <!-- Icon -->
                                 <div class="icon icon-sm text-danger">
